@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <!--
   Greetings fellow coders! :)
-  Created by yours truly, Liang Pan (can be found on LinkedIn).
+  Created by yours truly, Liang Pan (can be found on LinkedIn if you have any questions).
 -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>True Asian Test</title>
-
     <link rel="icon"
     type="image/png"
     href="favicon.png">
@@ -76,7 +75,6 @@
         </style>
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167442979-1"></script>
         <script>
@@ -85,6 +83,7 @@
           gtag('js', new Date());
 
           gtag('config', 'UA-167442979-1');
+          console.log("google analytics")
         </script>
   </head>
 
@@ -153,7 +152,7 @@
                       <li> <input type="checkbox" id="52"> Played with Yugioh/Pokemon cards?
                       <li> <input type="checkbox" id="53"> Believe in random superstitions such as optimal furniture placement?
                       <li> <input type="checkbox" id="54"> You celebrate most major traditional events?
-                      <li> <input type="checkbox" id="54"> Watch videos/shows while you eat?
+                      <li> <input type="checkbox" id="55"> Watch videos/shows when you eat?
                   </ol>
                 </br>
                   <input class="button" id="submit" type="submit" value="Calculate My Score!">
@@ -213,7 +212,7 @@
                   grade = "A+"
                 }
 
-                var percentage = "(" + (purity / 55) * 100) + "%" + ")" + " - " + grade
+                var percentage = "(" + ((purity / 55) * 100) + "%" + ")" + " - " + grade
 
                 // Shows the score in the h1
                 $('#score').html(purity + "/55")
