@@ -212,7 +212,7 @@
                   grade = "A+"
                 }
 
-                var percentage = "(" + ((purity / 55) * 100) + "%" + ")" + " - " + grade
+                var percentage = "(" + ((purity / 55) * 100).toPrecision(5) + "%" + ")" + " - " + grade
 
                 // Shows the score in the h1
                 $('#score').html(purity + "/55")
