@@ -5,11 +5,13 @@
 -->
 <html lang="en" dir="ltr">
   <head>
-
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>True Asian Test</title>
+
+    <link rel="icon"
+    type="image/png"
+    href="favicon.png">
     <!-- Style -->
         <style>
 
@@ -74,6 +76,7 @@
         </style>
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167442979-1"></script>
         <script>
@@ -130,7 +133,7 @@
                       <li> <input type="checkbox" id="31"> Speak more mother language than English?
                       <li> <input type="checkbox" id="32"> Speak your dialect fluently?
                       <li> <input type="checkbox" id="33"> Drink tea with random shit in it everyday?
-                      <li> <input type="checkbox" id="34"> Know mother countries national anthem?
+                      <li> <input type="checkbox" id="34"> Know mother country's national anthem?
                       <li> <input type="checkbox" id="35"> Drink/eat random shit to improve your health?
                       <li> <input type="checkbox" id="36"> Do stretches every morning?
                       <li> <input type="checkbox" id="37"> Lived in mother country for the majority of your life?
@@ -144,13 +147,14 @@
                       <li> <input type="checkbox" id="45"> "Boil" your feet every night?
                       <li> <input type="checkbox" id="46"> Know how to play Mahjong?
                       <li> <input type="checkbox" id="47"> Don't know how to use a knife and fork?
-                      <li> <input type="checkbox" id="48"> Send random articles from Wechat to family/friends?
+                      <li> <input type="checkbox" id="48"> Send random articles from Wechat/Kakaotalk to family/friends?
                       <li> <input type="checkbox" id="49"> Had a pet fish/rabbit?
                       <li> <input type="checkbox" id="50"> Lied about your age for cheaper tickets/entry?
                       <li> <input type="checkbox" id="51"> Have a heavy wooly floral duvet/blanket?
                       <li> <input type="checkbox" id="52"> Played with Yugioh/Pokemon cards?
-                      <li> <input type="checkbox" id="52"> Believe in random superstitions such as optimal furniture placement?
-                      <li> <input type="checkbox" id="52"> You celebrate most major traditional events?
+                      <li> <input type="checkbox" id="53"> Believe in random superstitions such as optimal furniture placement?
+                      <li> <input type="checkbox" id="54"> You celebrate most major traditional events?
+                      <li> <input type="checkbox" id="54"> Watch videos/shows while you eat?
                   </ol>
                 </br>
                   <input class="button" id="submit" type="submit" value="Calculate My Score!">
@@ -190,27 +194,27 @@
                 var purity = sins
 
                 if (purity < 10) {
-                  $('#result').html("You couldn't score higher? You're hella white-washed and have failed yet another test.")
+                  $('#result').html("You couldn't score higher? You already knew that you were white-washed.")
                   grade = "F"
                 }
                 if (purity >= 10 && purity < 25) {
-                  $('#result').html("You are white-washed but have a few asian tendencies. Go eat more rice.")
+                  $('#result').html("You are white-washed but have a few asian tendencies. You need some more rice in you!")
                   grade = "C"
                 }
                 if (purity >= 25 && purity < 35) {
-                  $('#result').html("You are kinda white washed but not really, probably an ABC or ABK. Go do your kumon homework.")
+                  $('#result').html("You are kinda white washed but not really, probably an ABC or ABK. Go do your kumon homework!")
                   grade = "B+"
                 }
                 if (purity >= 35 && purity < 45) {
-                  $('#result').html("You are engrained in your asian heritage and am proud of it. Azn Pride.")
+                  $('#result').html("You are engrained in your asian heritage and am proud of it. Azn Pride!")
                   grade = "A"
                 }
                 if (purity >= 45) {
-                  $('#result').html("You are hella asian. Hello Da Ma/ Halmeoni!")
+                  $('#result').html("You are hella asian. Got mad Da Ma/ Halmeoni vibes!")
                   grade = "A+"
                 }
 
-                var percentage = "(" + ((purity / 50) * 100).toPrecision(2) + "%" + ")" + " - " + grade
+                var percentage = "(" + (purity / 50) * 100) + "%" + ")" + " - " + grade
 
                 // Shows the score in the h1
                 $('#score').html(purity + "/50")
