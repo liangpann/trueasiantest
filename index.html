@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!--
+  Greetings fellow coders! :)
+  Created by yours truly, Liang Pan (can be found on LinkedIn if you have any questions).
+-->
 <html lang="en" dir="ltr">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -10,8 +14,6 @@
 
       gtag('config', 'UA-167442979-1');
     </script>
-
-
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,10 +50,21 @@
             position: relative;
             left: 150px;
         }
+
+        .button1 {
+            text-align: center;
+            width: 15%;
+            border-radius: 20px;
+            background-color: rgba(255, 119, 100, 0.3);
+            color: rgb(0, 0, 5);
+            position: relative;
+            left: 0px;
+        }
+
         footer {
           text-align: center;
           position: relative;
-          font-size:65%;
+          font-size:80%;
 
         }
 
@@ -66,8 +79,8 @@
             height: auto;
           }
 
-
         </style>
+
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
   </head>
@@ -137,7 +150,6 @@
                       <li> <input type="checkbox" id="52"> Played with Yugioh/Pokemon cards?
                       <li> <input type="checkbox" id="52"> Believe in random superstitions such as optimal furniture placement?
                       <li> <input type="checkbox" id="52"> You celebrate most major traditional events?
-
                   </ol>
                 </br>
                   <input class="button" id="submit" type="submit" value="Calculate My Score!">
@@ -145,7 +157,7 @@
 
                   <footer id="footer">
                     <br />
-                    <p class="copyright"> © OFFICIAL TRUE ASIAN TEST BY L PAN. DESIGN FROM RICE PURITY TEST.</p>
+                    <p class="copyright"> © OFFICIAL TRUE ASIAN TEST BY LIANG PAN. DESIGN FROM RICE PURITY TEST.</p>
                   </footer>
 
               </div>
@@ -158,6 +170,7 @@
                 <h1 id="score"></h1>
                 <h3 id="percentage"></h3>
                 <h3 id="result"></h3>
+                <input class="button1" id="redo" type="submit" value="Redo">
             </div> <!-- id = toShow -->
 
              <script>
@@ -184,11 +197,11 @@
                   grade = "C"
                 }
                 if (purity >= 25 && purity < 35) {
-                  $('#result').html("You are kinda white washed but not really, probably and ABC or ABK. Go do your kumon homework.")
-                  grade = "B"
+                  $('#result').html("You are kinda white washed but not really, probably an ABC or ABK. Go do your kumon homework.")
+                  grade = "B+"
                 }
                 if (purity >= 35 && purity < 45) {
-                  $('#result').html("You are engrained in your asian heritage and am proud of it. I hope you aren't too scarred.")
+                  $('#result').html("You are engrained in your asian heritage and am proud of it. Azn Pride.")
                   grade = "A"
                 }
                 if (purity >= 45) {
@@ -196,7 +209,7 @@
                   grade = "A+"
                 }
 
-                var percentage = "(" + (purity / 50) * 100 + "%" + ")" + " - " + grade
+                var percentage = "(" + ((purity / 50) * 100).toPrecision(2) + "%" + ")" + " - " + grade
 
                 // Shows the score in the h1
                 $('#score').html(purity + "/50")
@@ -205,22 +218,27 @@
                 // Shows the score and hides the checks
                 $("#toShow").show();
                 $("#toHide").hide();
-        });
+              });
 
-            // On click of the reset button:
-            $('#reset').click(function() {
+              // On click of the reset button:
+              $('#reset').click(function() {
+                  $('input:checkbox').removeAttr('checked');
+              });
+
+              $('#redo').click(function() {
+                // Hides the score and shows the checks
                 $('input:checkbox').removeAttr('checked');
-        });
+                $("#toShow").hide();
+                $("#toHide").show();
+              });
             </script>
     </div>
-
-
 
   </body>
   <script>
       $(document).ready(function() {
     $('.image-link').magnificPopup({type:'image'});
     });
-</script>
+  </script>
 
 </html>
