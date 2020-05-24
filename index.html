@@ -73,8 +73,21 @@
           }
 
         </style>
-
+        <!--JQuery-->
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+        <!-- Google Analytics -->
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-167442979-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <!-- End Google Analytics -->
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167442979-1"></script>
         <script>
@@ -126,7 +139,7 @@
                       <li> <input type="checkbox" id="26"> Had a bowl cut as a child?
                       <li> <input type="checkbox" id="27"> Wore matching outfits with your siblings?
                       <li> <input type="checkbox" id="28"> Most of your mates are Asian?
-                      <li> <input type="checkbox" id="29"> Eat chips with chopsticks?
+                      <li> <input type="checkbox" id="29"> Eat chips/snacks with chopsticks?
                       <li> <input type="checkbox" id="30"> Go back to the mother land more than 3 times a year?
                       <li> <input type="checkbox" id="31"> Speak more mother language than English?
                       <li> <input type="checkbox" id="32"> Speak your dialect fluently?
@@ -144,7 +157,7 @@
                       <li> <input type="checkbox" id="44"> Went to tutoring before primary school?
                       <li> <input type="checkbox" id="45"> "Boil" your feet every night?
                       <li> <input type="checkbox" id="46"> Know how to play Mahjong?
-                      <li> <input type="checkbox" id="47"> Don't know how to use a knife and fork?
+                      <li> <input type="checkbox" id="47"> Prefer to use chopsticks rather than a knife and fork?
                       <li> <input type="checkbox" id="48"> Send random articles from Wechat/Kakaotalk to family/friends?
                       <li> <input type="checkbox" id="49"> Had a pet fish/rabbit?
                       <li> <input type="checkbox" id="50"> Lied about your age for cheaper tickets/entry?
@@ -152,7 +165,12 @@
                       <li> <input type="checkbox" id="52"> Played with Yugioh/Pokemon cards?
                       <li> <input type="checkbox" id="53"> Believe in random superstitions such as optimal furniture placement?
                       <li> <input type="checkbox" id="54"> You celebrate most major traditional events?
-                      <li> <input type="checkbox" id="55"> Watch videos/shows when you eat?
+                      <li> <input type="checkbox" id="55"> Watch videos/shows while you eat?
+                      <li> <input type="checkbox" id="56"> Your parents compare you with your friends/relatives (the Kevin's/Jessica's down the street)?
+                      <li> <input type="checkbox" id="57"> You have never heard your parents say they're proud of you/ they love you?
+                      <li> <input type="checkbox" id="58"> You do crazy remedial tricks when your sick/injured (eg. cupping, coining, thumb pricking)?
+                      <li> <input type="checkbox" id="59"> You swear in your mother language?
+                      <li> <input type="checkbox" id="60"> You like your preserved foods?
                   </ol>
                 </br>
                   <input class="button" id="submit" type="submit" value="Calculate My Score!">
@@ -191,6 +209,15 @@
                 var sins = document.querySelectorAll('input[type="checkbox"]:checked').length;
                 var purity = sins
 
+                // Sends the score to Google Analytics
+                ga('send', {
+                    hitType: 'event',
+                    eventCategory: 'Score',
+                    eventAction: 'Total',
+                    eventLabel: purity.toString(),
+                    eventValue: purity
+                });
+
                 if (purity < 10) {
                   $('#result').html("You couldn't score higher? You already knew that you were white-washed.")
                   grade = "F"
@@ -199,11 +226,11 @@
                   $('#result').html("You are white-washed but have a few asian tendencies. You need some more rice in you!")
                   grade = "C"
                 }
-                if (purity >= 25 && purity < 35) {
+                if (purity >= 25 && purity < 30) {
                   $('#result').html("You are kinda white washed but not really, probably an ABC or ABK. Go do your kumon homework!")
                   grade = "B+"
                 }
-                if (purity >= 35 && purity < 45) {
+                if (purity >= 30 && purity < 45) {
                   $('#result').html("You are engrained in your asian heritage and am proud of it. Azn Pride!")
                   grade = "A"
                 }
@@ -212,10 +239,10 @@
                   grade = "A+"
                 }
 
-                var percentage = "(" + ((purity / 55) * 100).toPrecision(5) + "%" + ")" + " - " + grade
+                var percentage = "(" + ((purity / 60) * 100).toPrecision(5) + "%" + ")" + " - " + grade
 
                 // Shows the score in the h1
-                $('#score').html(purity + "/55")
+                $('#score').html(purity + "/60")
                 $('#percentage').html(percentage)
 
                 // Shows the score and hides the checks
