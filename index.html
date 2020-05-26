@@ -13,7 +13,6 @@
     href="favicon.png">
     <!-- Style -->
         <style>
-
         html {
             background-color: #FBEEC8;
             background-image: url("chopsticks.png");
@@ -26,6 +25,7 @@
         #list {
             text-align: left;
         }
+
         h1 {
             font-size: 300%;
             font-weight: bold;
@@ -73,6 +73,7 @@
           }
 
         </style>
+
         <!--JQuery-->
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
@@ -110,6 +111,7 @@
           gtag('config', 'UA-167442979-1');
           console.log("google analytics")
         </script>
+
   </head>
 
   <body>
@@ -152,7 +154,7 @@
                       <li> <input type="checkbox" id="27"> Wore matching outfits with your siblings?
                       <li> <input type="checkbox" id="28"> Most of your mates are Asian?
                       <li> <input type="checkbox" id="29"> Eat chips/snacks with chopsticks?
-                      <li> <input type="checkbox" id="30"> Go back to the mother land more than 3 times a year?
+                      <li> <input type="checkbox" id="30"> Go back to the mother land more than 2 times a year?
                       <li> <input type="checkbox" id="31"> Speak more mother language than English?
                       <li> <input type="checkbox" id="32"> Speak your dialect fluently?
                       <li> <input type="checkbox" id="33"> Drink tea with random shit in it everyday?
@@ -206,6 +208,8 @@
                 <input class="button1" id="redo" type="submit" value="Redo">
             </div> <!-- id = toShow -->
 
+
+
              <script>
             // IDs
             // toHide: Everything that needs to be hidden when score is shown
@@ -220,6 +224,7 @@
                 // Calculates purity
                 var sins = document.querySelectorAll('input[type="checkbox"]:checked').length;
                 var purity = sins
+
 
                 // Sends the score to Google Analytics
                 ga('send', {
@@ -239,7 +244,7 @@
                   grade = "C"
                 }
                 if (purity >= 25 && purity < 30) {
-                  $('#result').html("You are kinda white washed but not really, probably an ABC or ABK. Go do your kumon homework!")
+                  $('#result').html("B+ AGAIN?!? You are kinda white washed but not really, probably an ABC or ABK. Go do your kumon homework!")
                   grade = "B+"
                 }
                 if (purity >= 30 && purity < 45) {
@@ -273,7 +278,10 @@
                 $("#toShow").hide();
                 $("#toHide").show();
               });
+
             </script>
+
+
     </div>
 
   </body>
