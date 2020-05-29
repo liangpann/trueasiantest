@@ -57,7 +57,7 @@
         footer {
           text-align: center;
           position: relative;
-          font-size:80%;
+          font-size:95%;
 
         }
 
@@ -185,6 +185,16 @@
                       <li> <input type="checkbox" id="58"> You do crazy remedial tricks when your sick/injured (eg. cupping, coining, thumb pricking)?
                       <li> <input type="checkbox" id="59"> You swear in your mother language?
                       <li> <input type="checkbox" id="60"> You like your preserved foods?
+                      <li> <input type="checkbox" id="61"> You save sauce packets/napkins from restaurants?
+                      <li> <input type="checkbox" id="62"> You don't use the dishwasher?
+                      <li> <input type="checkbox" id="63"> You store pans/trays in the oven?
+                      <li> <input type="checkbox" id="64"> You are guilty of putting up the peace sign for photos?
+                      <li> <input type="checkbox" id="65"> You do swirley pen tricks like the cool nerd you are?
+                      <li> <input type="checkbox" id="66"> Your parents/friends have a highkey offensive nickname for you?
+                      <li> <input type="checkbox" id="67"> You have/had an unhealthy obsession with instant noodles?
+                      <li> <input type="checkbox" id="68"> Your parents show their affection by cutting up small pieces of fruit for you?
+                      <li> <input type="checkbox" id="69"> You eat certain foods to 'cool' down or 'heat' up your body?
+                      <li> <input type="checkbox" id="70"> You can do the asian squat properly (that means feet flat)?
                   </ol>
                 </br>
                   <input class="button" id="submit" type="submit" value="Calculate My Score!">
@@ -206,6 +216,36 @@
                 <h3 id="percentage"></h3>
                 <h3 id="result"></h3>
                 <input class="button1" id="redo" type="submit" value="Redo">
+                </br>
+
+                <p>
+                <!-- AddToAny BEGIN -->
+                <div style="width:370px; margin:0 auto;" class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="https://www.trueasiantest.com" data-a2a-title="trueasiantest">
+                <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                <a class="a2a_button_copy_link"></a>
+                <a class="a2a_button_facebook_messenger"></a>
+                <a class="a2a_button_facebook"></a>
+                <a class="a2a_button_twitter"></a>
+                <a class="a2a_button_whatsapp"></a>
+                <a class="a2a_button_kakao"></a>
+                <a class="a2a_button_line"></a>
+                <a class="a2a_button_skype"></a>
+                <a class="a2a_button_wechat"></a>
+                </div>
+                <script async src="https://static.addtoany.com/menu/page.js"></script>
+              </p>
+              <p>
+              </p>
+              <p>
+                <h4> "Find out which of your friends lowkey be </br> white-washed!" </br> (screenshot and send/share this shit) </h4>
+              </p>
+              <p>
+                Also... uhm... if it's not too much trouble... I'm thinking of potentially making a video about this whole process, making more lit content and releasing statistics about
+              </br>this test (e.g. average, mean, highest/lowest mark). So yea... if you wanna stay posted/find out if you beat the average please check out <a href = "https://www.instagram.com/trueasiantest/">@trueasiantest</a> on insta! </br> Love y'all & stay safe! &#129402;&#129402;&#129402;
+              </p>
+
+                <!-- AddToAny END -->
+
             </div> <!-- id = toShow -->
 
 
@@ -235,31 +275,35 @@
                     eventValue: purity
                 });
 
-                if (purity < 10) {
+                if (purity < 15) {
                   $('#result').html("You couldn't score higher? You already knew that you were hella white-washed.")
                   grade = "F"
                 }
-                if (purity >= 10 && purity < 25) {
+                if (purity >= 15 && purity < 30) {
                   $('#result').html("You are white-washed but have a few asian tendencies. You need some more rice in you!")
                   grade = "C"
                 }
-                if (purity >= 25 && purity < 30) {
+                if (purity >= 30 && purity < 40) {
                   $('#result').html("B+ AGAIN?!? You are kinda white washed but not really, probably an ABC or ABK. Go do your kumon homework!")
                   grade = "B+"
                 }
-                if (purity >= 30 && purity < 45) {
+                if (purity >= 40 && purity < 50) {
                   $('#result').html("You are engrained in your asian heritage and am proud of it. Azn Pride!")
+                  grade = "A-"
+                }
+                if (purity >= 50 && purity < 60) {
+                  $('#result').html("You have been trained well my young dumpling, but like this isn't an A+. There is still much more to be done!")
                   grade = "A"
                 }
-                if (purity >= 45) {
-                  $('#result').html("You are hella asian. Got mad Da Ma/ Halmeoni vibes!")
+                if (purity >= 60) {
+                  $('#result').html("You are hella asian. Got mad Da Ma/ Halmeoni vibes! Respect!")
                   grade = "A+"
                 }
 
-                var percentage = "(" + ((purity / 60) * 100).toPrecision(5) + "%" + ")" + " - " + grade
+                var percentage = "(" + ((purity / 70) * 100).toPrecision(5) + "%" + ")" + " - " + grade
 
                 // Shows the score in the h1
-                $('#score').html(purity + "/60")
+                $('#score').html(purity + "/70")
                 $('#percentage').html(percentage)
 
                 // Shows the score and hides the checks
@@ -280,7 +324,6 @@
               });
 
             </script>
-
 
     </div>
 
