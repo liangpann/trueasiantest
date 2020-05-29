@@ -196,6 +196,7 @@
                       <li> <input type="checkbox" id="69"> You eat certain foods to 'cool' down or 'heat' up your body?
                       <li> <input type="checkbox" id="70"> You can do the asian squat properly (that means feet flat on the floor)?
                       <li> <input type="checkbox" id="71"> You feel like you've sinned if you don't get top marks?
+                      <li> <input type="checkbox" id="72"> You get interrogated about your whereabouts/who was there when you go out?
                   </ol>
                 </br>
                   <input class="button" id="submit" type="submit" value="Calculate My Score!">
@@ -301,10 +302,10 @@
                   grade = "A+"
                 }
 
-                var percentage = "(" + ((purity / 71) * 100).toPrecision(5) + "%" + ")" + " - " + grade
+                var percentage = "(" + ((purity / 72) * 100).toPrecision(5) + "%" + ")" + " - " + grade
 
                 // Shows the score in the h1
-                $('#score').html(purity + "/71")
+                $('#score').html(purity + "/72")
                 $('#percentage').html(percentage)
 
                 // Shows the score and hides the checks
